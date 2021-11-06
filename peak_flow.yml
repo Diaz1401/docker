@@ -1,0 +1,3 @@
+script:
+  - curl ipconfg.io
+  - lscpu

@@ -1,5 +1,0 @@
-cirrus_container_task:
-  auto_cancellation: true
-  container:
-    image: ubuntu:latest
-  spec_script: lscpu
