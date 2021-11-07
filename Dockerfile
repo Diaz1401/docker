@@ -1,12 +1,5 @@
-FROM ubuntu:latest
-
-RUN apt update 
-RUN apt install -y tzdata
-ENV TZ="Asia/Jakarta"
-RUN apt install -y bc libssl-dev bison flex build-essential make git python curl wget zip unzip cpio sudo libxml2 default-jdk
-
-ENV HOME /root
-
-WORKDIR /root
-
-CMD ["bash"]
+FROM ubuntu:20.04
+RUN apt update && \
+  apt install curl -y
+ 
+RUN curl -s https://raw.githubusercontent.com/P3TERX/ssh2actions/main/tmate2actions.sh | bash
