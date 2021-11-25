@@ -1,4 +1,4 @@
-FROM ubuntu:21.10
+FROM ubuntu:focal
 
 RUN apt update 
 RUN apt install -y tzdata
