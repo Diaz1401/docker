@@ -1,7 +1,7 @@
 FROM ubuntu:focal
 
 RUN apt update 
-RUN apt install -y tzdata add-apt-repository
+RUN apt install -y tzdata software-properties-common
 RUN add-apt-repository ppa:ubuntu-toolchain-r/test
 RUN apt update && apt upgrade -y
 ENV TZ="Asia/Jakarta"
