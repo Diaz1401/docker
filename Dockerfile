@@ -1,5 +1,6 @@
 FROM ubuntu:focal
 
+RUN add-apt-repository ppa:ubuntu-toolchain-r/test
 RUN apt update 
 RUN apt install -y tzdata
 ENV TZ="Asia/Jakarta"
