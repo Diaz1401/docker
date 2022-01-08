@@ -28,10 +28,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: diazaji/python:kernel
-      - uses: yanzay/notify-telegram@v0.1.0
-        if: always()
-        with:
-          chat: ${{ secrets.CHAT }}
-          token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          status: ${{ job.status }}
+          tags: diazaji/python:clang
