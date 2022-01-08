@@ -8,8 +8,9 @@ RUN apt update && \
     add-apt-repository ppa:ubuntu-toolchain-r/test && \
     apt update && \
     apt upgrade -y
+RUN apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false && \
+    rm -rf /var/lib/apt/lists/*
 ENV SHELL="bash"
 ENV TZ="Asia/Jakarta"
-ENV HOME /root
-WORKDIR /root
+ENV HOME="/root"
 CMD ["bash"]
