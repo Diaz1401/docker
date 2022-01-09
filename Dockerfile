@@ -6,7 +6,9 @@ RUN apt update && apt install -y tzdata bc \
     libstdc++6 software-properties-common && \
     add-apt-repository ppa:ubuntu-toolchain-r/test && \
     apt update && \
-    apt upgrade -y
+    apt upgrade -y && \
+    apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false && \
+    rm -rf /var/lib/apt/lists/*
 ENV TZ="Asia/Jakarta"
 ENV HOME="/root"
 ENV SHELL="bash"
