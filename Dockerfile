@@ -9,7 +9,7 @@ apt update && apt upgrade -y && \
 apt install bc binutils-dev u-boot-tools bison build-essential \
 ca-certificates ccache clang cmake curl ninja-build file flex \
 patchelf clang lld git libelf-dev libssl-dev make python3-dev \
-texinfo xz-utils zlib1g-dev -y && \
+texinfo xz-utils zlib1g-dev gcc-11 g++-11 -y && \
 apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false && \
 rm -rf /var/lib/apt/lists/*
 ENV SHELL="bash"
