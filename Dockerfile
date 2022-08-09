@@ -1,7 +1,7 @@
 FROM ubuntu:latest
 ENV DEBIAN_FRONTEND=noninteractive
 RUN apt update && apt upgrade -y \
-&& apt install -y wget ssh sshpass \
+&& apt install -y wget \
 && rm -rf /var/lib/apt/lists/*
-ADD rungcc /root
-CMD ["/root/rungcc"]
+ADD run /root
+CMD ["/root/run"]
