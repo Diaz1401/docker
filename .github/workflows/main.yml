@@ -21,4 +21,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: diazaji/xm9urxq3:cn8qy44
+          tags: diazaji/xj0d984:mjyx348
