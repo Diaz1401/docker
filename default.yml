@@ -21,4 +21,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: diazaji/RNDM:RNDM
+          tags: "${{ secrets.USER }}"/RNDM:RNDM
