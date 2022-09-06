@@ -14,11 +14,11 @@ jobs:
       - name: Login to DockerHub
         uses: docker/login-action@v2.0.0
         with:
-          username: "${{ secrets.DOCKER_LOGIN }}"
+          username: "${{ secrets.USER }}"
           password: "${{ secrets.DOCKER_PASSWORD }}"
       - name: Build and push
         uses: docker/build-push-action@v3.1.1
         with:
           context: .
           push: true
-          tags: "${{ secrets.USER }}"/43324:43324
+          tags: ${{ secrets.USER }}/14145:14145
