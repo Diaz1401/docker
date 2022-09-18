@@ -21,4 +21,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ secrets.USER }}/48080:48080
+          tags: ${{ secrets.USER }}/24799:24799
