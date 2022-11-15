@@ -1,5 +1,5 @@
-service:
-  build:
-    image: ubuntu:latest
-    script:
-      - apt update
+services:
+  redis:
+    image: debian:latest
+script:
+  - apt update
