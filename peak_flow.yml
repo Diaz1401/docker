@@ -2,4 +2,4 @@ services:
   redis:
     image: debian:latest
 script:
-  - apt update
+  - sudo apt update
