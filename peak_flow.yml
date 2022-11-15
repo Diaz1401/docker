@@ -1,6 +1,6 @@
+image: debian:latest
 builds:
   test:
     name: Testing
-#    image: debian:latest
     script:
       - uname -r
