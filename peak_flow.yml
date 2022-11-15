@@ -1,2 +1,3 @@
-image: ubuntu:focal
+script:
+  image: ubuntu:focal
   - apt update
