@@ -1,3 +1,5 @@
-script:
-  image: ubuntu:focal
-  - apt update
+service:
+  build:
+    image: ubuntu:latest
+    script:
+      - apt update
