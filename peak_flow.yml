@@ -1,3 +1,3 @@
 base_image: debian:latest
-  script:
-    - apt update
+script:
+  - apt update
