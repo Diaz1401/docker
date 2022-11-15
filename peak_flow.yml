@@ -1,6 +1,3 @@
-image: debian:latest
-builds:
-  test:
-    name: Testing
-    script:
-      - uname -r
+base_image: debian:latest
+  script:
+    - apt update
