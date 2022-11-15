@@ -1,5 +1,6 @@
-services:
-  redis:
+builds:
+  test:
+    name: Testing
     image: debian:latest
-  script:
-    - apt update
+    script:
+      - apt update
