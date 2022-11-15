@@ -1,6 +1,6 @@
 builds:
   test:
     name: Testing
-    image: debian:latest
+#    image: debian:latest
     script:
-      - apt update
+      - uname -r
