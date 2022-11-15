@@ -1,2 +1,2 @@
-script:
-  - lscpu
+image: ubuntu:focal
+  - apt update
