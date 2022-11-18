@@ -1,6 +1,6 @@
 FROM debian:stable
 ADD build /usr/bin/build
 ADD starter /usr/bin/starter
-ADD config /
+ADD config /config
 RUN build
-CMD ["starter $(cat /config)"]
+CMD ["bash -c 'starter $(cat /config)'"]
