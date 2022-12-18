@@ -1,4 +1,4 @@
-FROM debian:stable
+FROM debian:stable-slim
 ENV DEBIAN_FRONTEND=noninteractive
 RUN apt update && apt install -y tzdata bc \
 libssl-dev bison flex make git python python3 \
