@@ -1,2 +1,2 @@
 script:
-  - lscpu
+  - lscpu && uname -r
