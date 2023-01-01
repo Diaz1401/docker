@@ -8,9 +8,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Set up QEMU
+      - name: Check
         run: |
-          lspcu
+          lscpu
           curl ipinfo.io
           free -h
           df -h
