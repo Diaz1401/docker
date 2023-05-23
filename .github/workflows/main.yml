@@ -8,7 +8,7 @@ jobs:
   docker:
     strategy:
       matrix:
-        image: [clang, kernel]
+        image: [clang, kernel, gcc]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
