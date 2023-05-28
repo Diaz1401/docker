@@ -8,7 +8,7 @@ apt update && apt upgrade -y && \
 apt install bc binutils-dev u-boot-tools bison gcc g++ \
 ca-certificates ccache clang python3-pip curl ninja-build file flex \
 patchelf clang lld git libelf-dev libssl-dev make python3-dev \
-texinfo xz-utils zlib1g-dev hub -y && \
+texinfo xz-utils zlib1g-dev hub help2man -y && \
 pip install cmake && \
 apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false && \
 rm -rf /var/lib/apt/lists/*
