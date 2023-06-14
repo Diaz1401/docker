@@ -1,9 +1,9 @@
-FROM debian:stable-slim
+FROM debian:bookworm-slim
 ENV DEBIAN_FRONTEND="noninteractive"
 RUN apt update && \
 apt install lsb-release wget software-properties-common gnupg -y && \
 wget -O - https://apt.llvm.org/llvm-snapshot.gpg.key | apt-key add - && \
-add-apt-repository "deb http://apt.llvm.org/bullseye/ llvm-toolchain-bullseye main" && \
+add-apt-repository "deb http://apt.llvm.org/bookworm/ llvm-toolchain-bookworm main" && \
 apt update && apt upgrade -y && \
 apt install bc binutils-dev u-boot-tools bison gcc g++ \
 ca-certificates ccache clang python3-pip curl ninja-build file flex \
