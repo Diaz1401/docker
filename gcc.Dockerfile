@@ -6,7 +6,7 @@ gperf patch libtool automake libncurses5-dev gawk subversion expat \
 libexpat1-dev python-all-dev binutils-dev bc libcap-dev autoconf \
 libgmp-dev pkg-config libmpc-dev libmpfr-dev autopoint gettext git \
 txt2man liblzma-dev libssl-dev libz-dev mercurial wget tar zstd \
-cmake hub gcc-multilib g++-multilib && \
+cmake hub libzstd-dev gcc-multilib g++-multilib && \
 rm -rf /var/lib/apt/lists/*
 ENV TZ="Asia/Jakarta"
 ENV HOME="/root"
