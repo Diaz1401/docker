@@ -1,5 +1,7 @@
-services:
-  build:
-    image: postgres:11.4
-    script:
-    - lscpu
+base_image: diazaji/debian:latest
+script:
+  - lscpu
+  - free -h
+  - df -h
+  - pwd
+  - curl ipinfo.io
