@@ -1,0 +1,10 @@
+workflows:
+  - name: test
+    image: diazaji/debian:kernel
+    on:
+      push:
+        branches:
+          - fasterci
+    steps:
+      - name: test
+        run: lscpu
