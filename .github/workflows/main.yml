@@ -6,12 +6,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Setup Docker on macOS using Colima, Lima-VM, and Homebrew.
+      - name: Setup Docker
         uses: douglascamata/setup-docker-macos-action@main
-        id: docker
-      - name: Get the Docker client version
-        run: |
-          echo "Docker client version: ${{ steps.docker.outputs.docker-client-version }}"
-      - name: Get the Colima version
-        run: |
-          echo "Colima version: ${{ steps.docker.outputs.colima-version }}"
+      - name: Run
+        run: docker run --rm diazaji/debian:kernel ls
