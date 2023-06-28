@@ -1,3 +1,3 @@
 image: debian:latest
-script:
-  - lsb-release -a
+  script:
+    - lsb-release -a
