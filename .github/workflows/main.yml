@@ -15,4 +15,4 @@ jobs:
       - name: Run Docker
         run: |
           set -x
-          docker run diazaji/debian:kernel lscpu
+          docker run diazaji/debian:kernel ls
