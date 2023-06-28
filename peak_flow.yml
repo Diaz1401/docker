@@ -1,3 +1,5 @@
-image: debian:latest
-  script:
-    - lsb-release -a
+services:
+  build:
+    image: postgres:11.4
+    script:
+    - lscpu
