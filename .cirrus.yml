@@ -1,6 +1,6 @@
 task:
   container:
-    cpu: 10
+    cpu: 8
     memory: 16G
     matrix:
       - image: node:latest
