@@ -1,11 +1,18 @@
-container:
-  image: node:latest
-  cpu: 10
-  memory: 16G
-
-check_task:
+task:
+  container:
+    cpu: 10
+    memory: 16G
+    matrix:
+      - image: node:latest
+      - image: node:lts
   node_modules_cache:
     folder: node_modules
-    fingerprint_script: cat yarn.lock
+    fingerprint_script:
+      - node --version
+      - cat yarn.lock
     populate_script: yarn install
-  test_script: yarn test
+  matrix:
+    - name: Build
+      build_script: yarn build
+    - name: Test
+      test_script: yarn run test
