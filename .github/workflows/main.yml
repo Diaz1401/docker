@@ -7,6 +7,11 @@ jobs:
       - name: Setup Docker
         uses: douglascamata/setup-docker-macos-action@main
       - name: Run Docker
-        uses: docker://diazaji/debian:clang
-      - name: test
-        run: lscpu
+        uses: kohlerdominik/docker-run-action@main
+        with: 
+          image: diazaji/debian:clang
+          volumes: ${{ github.workspace }}:/workspace
+          run: |
+            lscpu
+            ls
+            nproc
