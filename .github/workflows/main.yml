@@ -7,11 +7,8 @@ jobs:
       - name: Setup Docker
         uses: douglascamata/setup-docker-macos-action@main
       - name: Run Docker
-        uses: kohlerdominik/docker-run-action@main
-        with: 
-          image: diazaji/debian:clang
-          volumes: ${{ github.workspace }}:/workspace
-          run: |
-            lscpu
-            ls
-            nproc
+        run: |
+          docker run diazaji/debian:kernel \
+          --volume $GITHUB_WORKSPACE:/workspace \
+          --cpus $(sysctl -n hw.ncpu) \
+          sh -c "lscpu;nproc;ls workspace"
