@@ -6,6 +6,7 @@ jobs:
     steps:
       - name: Setup Docker
         uses: douglascamata/setup-docker-macos-action@main
+      - run: cat ~/Library/Group Containers/group.com.docker/settings.json
       - name: Run Docker
         run: |
           docker run --volume $GITHUB_WORKSPACE:/workspace \
