@@ -8,7 +8,6 @@ jobs:
         uses: douglascamata/setup-docker-macos-action@main
       - name: Run Docker
         run: |
-          docker run diazaji/debian:kernel \
-          --volume $GITHUB_WORKSPACE:/workspace \
-          --cpus $(sysctl -n hw.ncpu) \
+          docker run --volume $GITHUB_WORKSPACE:/workspace \
+          --cpus $(sysctl -n hw.ncpu) diazaji/debian:kernel \
           sh -c "lscpu;nproc;ls workspace"
