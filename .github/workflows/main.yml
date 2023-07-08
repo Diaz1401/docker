@@ -9,5 +9,5 @@ jobs:
       - name: Run Docker
         run: |
           docker run --volume $GITHUB_WORKSPACE:/workspace \
-          --cpus $(sysctl -n hw.ncpu) diazaji/debian:kernel \
-          sh -c "lscpu;nproc;ls workspace"
+          --cpus $(sysctl -n hw.ncpu) --cpuset-cpus 0-11 \
+          diazaji/debian:kernel sh -c "lscpu;nproc;ls workspace"
