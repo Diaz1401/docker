@@ -6,7 +6,7 @@ wget -qO- https://apt.llvm.org/llvm-snapshot.gpg.key | tee /etc/apt/trusted.gpg.
 echo "deb http://apt.llvm.org/bookworm/ llvm-toolchain-bookworm main" | tee -a /etc/apt/sources.list && \
 apt update && apt upgrade -y && \
 apt install -y bc binutils-dev u-boot-tools bison gcc g++ \
-ca-certificates ccache clang cmake curl ninja-build file flex patchelf libelf-dev \
+ca-certificates ccache clang lld cmake curl ninja-build file flex patchelf libelf-dev \
 libssl-dev make python3-all-dev texinfo xz-utils zlib1g-dev hub help2man \
 clang-tidy-18 clang-format-18 clang-tools-18 llvm-18-dev lld-18 \
 lldb-18 llvm-18-tools libomp-18-dev libc++-18-dev libc++abi-18-dev \
