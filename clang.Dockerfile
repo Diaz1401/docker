@@ -8,10 +8,10 @@ apt update && apt upgrade -y && \
 apt install -y bc binutils-dev u-boot-tools bison gcc g++ \
 ca-certificates ccache clang lld cmake curl ninja-build file flex patchelf libelf-dev \
 libssl-dev make python3-all-dev texinfo xz-utils zlib1g-dev hub help2man \
-clang-tidy-18 clang-format-18 clang-tools-18 llvm-18-dev lld-18 \
-lldb-18 llvm-18-tools libomp-18-dev libc++-18-dev libc++abi-18-dev \
-libclang-common-18-dev libclang-18-dev libclang-cpp18-dev libunwind-18-dev \
-libclang-rt-18-dev libpolly-18-dev && \
+clang-tidy-19 clang-format-19 clang-tools-19 llvm-19-dev lld-19 \
+lldb-19 llvm-19-tools libomp-19-dev libc++-19-dev libc++abi-19-dev \
+libclang-common-19-dev libclang-19-dev libclang-cpp19-dev libunwind-19-dev \
+libclang-rt-19-dev libpolly-19-dev && \
 rm -rf /var/lib/apt/lists/* && \
 rm -rf /var/cache/*
 ENV SHELL="bash"
