@@ -11,7 +11,7 @@ libssl-dev make python3-all-dev texinfo xz-utils zlib1g-dev hub help2man \
 clang-tidy-19 clang-format-19 clang-tools-19 llvm-19-dev lld-19 \
 lldb-19 llvm-19-tools libomp-19-dev libc++-19-dev libc++abi-19-dev \
 libclang-common-19-dev libclang-19-dev libclang-cpp19-dev libunwind-19-dev \
-libclang-rt-19-dev libpolly-19-dev && \
+libclang-rt-19-dev libpolly-19-dev locales && \
 rm -rf /var/lib/apt/lists/* && \
 rm -rf /var/cache/*
 ENV SHELL="bash"

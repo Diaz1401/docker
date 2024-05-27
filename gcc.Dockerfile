@@ -5,7 +5,7 @@ apt install build-essential flex bison ncurses-dev texinfo curl \
 gperf patch libtool automake libncurses5-dev gawk subversion expat \
 libexpat1-dev python3-all-dev binutils-dev bc libcap-dev autoconf \
 libgmp-dev pkg-config libmpc-dev libmpfr-dev autopoint gettext git \
-txt2man liblzma-dev libssl-dev libz-dev mercurial wget tar zstd \
+txt2man liblzma-dev libssl-dev libz-dev mercurial wget tar zstd locales \
 hub libzstd-dev cmake gcc-multilib g++-multilib -y  && \
 rm -rf /var/lib/apt/lists/* && \
 rm -rf /var/cache/*
