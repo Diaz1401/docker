@@ -11,6 +11,10 @@ RUN apt update && apt upgrade -y && \
     libgmp-dev pkg-config libmpc-dev libmpfr-dev autopoint gettext git \
     txt2man liblzma-dev libssl-dev libz-dev mercurial wget tar zstd locales \
     hub libzstd-dev cmake gcc-multilib g++-multilib && \
+    echo "LC_ALL=en_US.UTF-8" | tee -a /etc/environment && \
+    echo "en_US.UTF-8 UTF-8" | tee -a /etc/locale.gen && \
+    echo "LANG=en_US.UTF-8" | tee -a /etc/locale.conf && \
+    locale-gen en_US.UTF-8 && \
     apt clean && \
     rm -rf  /tmp/* \
             /var/tmp/* \
