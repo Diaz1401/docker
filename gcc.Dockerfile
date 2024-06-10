@@ -10,7 +10,7 @@ RUN apt update && apt upgrade -y && \
     libexpat1-dev python3-all-dev binutils-dev bc libcap-dev autoconf \
     libgmp-dev pkg-config libmpc-dev libmpfr-dev autopoint gettext git \
     txt2man liblzma-dev libssl-dev libz-dev mercurial wget tar zstd locales \
-    hub libzstd-dev cmake gcc-multilib g++-multilib && \
+    hub libzstd-dev cmake gcc-multilib g++-multilib ca-certificates && \
     echo "LC_ALL=en_US.UTF-8" | tee -a /etc/environment && \
     echo "en_US.UTF-8 UTF-8" | tee -a /etc/locale.gen && \
     echo "LANG=en_US.UTF-8" | tee -a /etc/locale.conf && \

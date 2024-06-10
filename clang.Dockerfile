@@ -18,7 +18,7 @@ RUN apt update && apt install -y --no-install-recommends \
     clang-format-${LLVM_VER} clang-tools-${LLVM_VER} llvm-${LLVM_VER}-dev llvm-${LLVM_VER}-tools \
     libomp-${LLVM_VER}-dev libc++-${LLVM_VER}-dev libc++abi-${LLVM_VER}-dev libclang-common-${LLVM_VER}-dev \
     libclang-${LLVM_VER}-dev libclang-cpp${LLVM_VER}-dev libunwind-${LLVM_VER}-dev \
-    libclang-rt-${LLVM_VER}-dev libpolly-${LLVM_VER}-dev && \
+    libclang-rt-${LLVM_VER}-dev libpolly-${LLVM_VER}-dev ca-certificates && \
     echo "LC_ALL=en_US.UTF-8" | tee -a /etc/environment && \
     echo "en_US.UTF-8 UTF-8" | tee -a /etc/locale.gen && \
     echo "LANG=en_US.UTF-8" | tee -a /etc/locale.conf && \
