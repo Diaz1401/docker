@@ -16,7 +16,7 @@ RUN apt update && apt install -y --no-install-recommends \
     lldb-${LLVM_VER} lld-${LLVM_VER} clangd-${LLVM_VER} clang-tidy-${LLVM_VER} clang-format-${LLVM_VER} \
     clang-tools-${LLVM_VER} llvm-${LLVM_VER}-dev llvm-${LLVM_VER}-tools libomp-${LLVM_VER}-dev \
     libc++-${LLVM_VER}-dev libc++abi-${LLVM_VER}-dev libclang-common-${LLVM_VER}-dev \
-    libclang-${LLVM_VER}-dev libclang-cpp${LLVM_VER}-dev libunwind-${LLVM_VER}-dev ccache \
+    libclang-${LLVM_VER}-dev libclang-cpp${LLVM_VER}-dev libunwind-${LLVM_VER}-dev \
     libclang-rt-${LLVM_VER}-dev libpolly-${LLVM_VER}-dev ca-certificates build-essential ncurses-dev \
     gperf patch libtool automake libncurses5-dev gawk subversion expat libexpat1-dev binutils-dev bc \
     libcap-dev autoconf libgmp-dev pkg-config libmpc-dev libmpfr-dev autopoint gettext git txt2man \
