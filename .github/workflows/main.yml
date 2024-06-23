@@ -7,7 +7,10 @@ jobs:
   docker:
     runs-on: macos-13-large
     steps:
+      - uses: actions/checkout@v4
       - name: Setup Docker on macOS
         uses: douglascamata/setup-docker-macos-action@v1-alpha.13
       - name: Build Docker image
-        run: docker run --rm diazaji/debian:kernel /bin/bash -c 'lscpu; free -h; df -h;'
+        run: docker build -t image -f kernel.Dockerfile .
+      - name: Run Docker container
+        run: docker run --rm image 'free -h'
