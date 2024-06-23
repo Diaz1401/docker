@@ -8,9 +8,16 @@ jobs:
     runs-on: macos-13-large
     steps:
       - uses: actions/checkout@v4
+      - name: Colima cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.colima
+            ~/.lima/colima
+          key: docker-cache
       - name: Setup Docker on macOS
         uses: douglascamata/setup-docker-macos-action@v1-alpha.13
       - name: Build Docker image
         run: docker build -t image -f kernel.Dockerfile .
       - name: Run Docker container
-        run: docker run --rm image 'free -h'
+        run: docker run --rm image bash -c lscpu
