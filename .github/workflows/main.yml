@@ -19,6 +19,7 @@ jobs:
           remove-codeql: 'true'
       - name: Test
         run: |
+          ls
           pwd
           df -h
           free -h
