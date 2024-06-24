@@ -13,13 +13,9 @@ jobs:
         with:
           root-reserve-mb: 5120
           swap-size-mb: 10240
-          remove-dotnet: 'true'
-          remove-android: 'true'
-          remove-haskell: 'true'
-          remove-codeql: 'true'
       - uses: actions/checkout@v4
       - name: Test
-        shell: docker run --rm -v .:/root -w /root -e GITHUB_TOKEN diazaji/debian:kernel /bin/bash --noprofile --norc -e -o pipefail {0}
+        shell: docker run --rm -v /home/runner/work/docker/docker:/root -w /root -e GITHUB_TOKEN diazaji/debian:kernel /bin/bash --noprofile --norc -e -o pipefail {0}
         run: |
           apt update
           apt install free -y
