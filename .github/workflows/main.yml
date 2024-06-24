@@ -7,13 +7,11 @@ on:
 jobs:
   docker:
     runs-on: ubuntu-latest
-    container:
-      image: diazaji/debian:kernel
     steps:
       - name: Maximize build space
         uses: easimon/maximize-build-space@master
         with:
-          root-reserve-mb: 512
+          root-reserve-mb: 5120
           swap-size-mb: 10240
           remove-dotnet: 'true'
           remove-android: 'true'
@@ -21,9 +19,10 @@ jobs:
           remove-codeql: 'true'
       - uses: actions/checkout@v4
       - name: Test
+        shell: docker run --rm -v .:/root -w /root -e GITHUB_TOKEN diazaji/debian:kernel /bin/bash --noprofile --norc -e -o pipefail {0}
         run: |
-          ls
-          pwd
-          df -h
+          apt update
+          apt install free -y
           free -h
-          lscpu
+          df -h
+          ls
