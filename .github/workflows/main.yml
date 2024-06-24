@@ -4,8 +4,6 @@ on:
     branches:
       - test-github
   workflow_dispatch:
-env:
-  DOCKER_CMD: "docker run --rm -v /home/runner/work/docker/docker:/root -w /root -e GITHUB_TOKEN diazaji/debian:kernel /bin/bash -c"
 jobs:
   docker:
     runs-on: ubuntu-latest
@@ -15,16 +13,14 @@ jobs:
         with:
           root-reserve-mb: 5120
           swap-size-mb: 10240
+          remove-dotnet: 'true'
+          remove-android: 'true'
+          remove-haskell: 'true'
+          remove-codeql: 'true'
       - uses: actions/checkout@v4
-      - name: Test
+      - name: Install Packages
+        shell: sudo bash --noprofile --norc -e -o pipefail {0}
         run: |
-          docker run --rm -v /dev/mapper/buildvg-buildlv:/root \
-            -w /root -e GITHUB_TOKEN diazaji/debian:kernel /bin/bash -c \
-            '
-            apt update
-            apt install free -y
-            free -h
-            df -h
-            ls
-            pwd
-            '
+          apt-get update
+          apt-get install -y linux-tools-common
+          perf record -a -e cycles:u -b any,u -o /dev/null sleep 1
