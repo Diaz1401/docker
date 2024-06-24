@@ -4,6 +4,8 @@ on:
     branches:
       - test-github
   workflow_dispatch:
+env:
+  DOCKER_CMD: "docker run --rm -v /home/runner/work/docker/docker:/root -w /root -e GITHUB_TOKEN diazaji/debian:kernel /bin/bash -c"
 jobs:
   docker:
     runs-on: ubuntu-latest
@@ -16,7 +18,7 @@ jobs:
       - uses: actions/checkout@v4
       - name: Test
         run: |
-          docker run --rm -v /home/runner/work/docker/docker:/root \
+          docker run --rm -v /dev/mapper/buildvg-buildlv:/root \
             -w /root -e GITHUB_TOKEN diazaji/debian:kernel /bin/bash -c \
             '
             apt update
