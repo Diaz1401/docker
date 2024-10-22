@@ -1,4 +1,4 @@
-FROM debian:bookworm-slim
+FROM ubuntu:latest
 ENV DEBIAN_FRONTEND=noninteractive \
     SHELL="/bin/bash" \
     TZ="Asia/Jakarta" \
